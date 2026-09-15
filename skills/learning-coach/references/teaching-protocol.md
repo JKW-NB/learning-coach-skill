@@ -114,14 +114,60 @@ Keep progress unchanged, explain again using a simpler model, and ask a new chec
 - At the last Part, report completion and do not begin a new topic or development Task automatically.
 - If earlier progress cannot be verified, say it is unknown rather than inventing a count.
 
-## Learning-Driven Development Recap
+## Project-Driven Learning Workflow
 
-After authorized implementation and successful verification, recap:
+Use this workflow only when learning is tied to a development project and the project already has `LEARNING_MAP.md`, an equivalent knowledge map, or the user explicitly asks to maintain one. Do not create a knowledge map for an ordinary standalone lesson.
 
-- where the concept appears in the actual code;
-- why the chosen design fits the project;
-- credible alternatives;
+```text
+Development Task
+→ stable Learning Parts
+→ teach, check, and grade each Part
+→ all Parts pass
+→ Learning Map Sync Gate
+→ explicit implementation authorization
+→ implementation or review of existing code
+→ Implementation Reflection
+→ second knowledge-map sync
+→ Task completion
+→ next Task only by explicit user decision
+```
+
+The levels have different jobs:
+
+- **Part** is one classroom concept. Passing it updates conversational progress only by default.
+- **Task** is the knowledge consolidation unit. All of its Parts passing triggers the sync gate.
+- **Milestone** groups Tasks for project progress and is not the routine unit for writing learning notes.
+
+### Learning Map Sync Gate
+
+After every Part in the current Task passes, do not begin the next Task or implementation. First update the matching knowledge-tree nodes with a concise record of what actually occurred:
+
+- status such as `已完成本轮学习`, never an unsupported claim of mastery;
+- a short knowledge summary suitable for later review;
+- why the project needs the concept;
+- only the understanding demonstrated in the user's answers;
+- misunderstandings that actually appeared;
+- points that still need deeper study.
+
+Summarize rather than copying the teaching conversation. If the user did not demonstrate part of the understanding, mark it for later deepening instead of inventing evidence.
+
+Keep the map organized by knowledge relationships. A Task triggers updates to existing concept nodes; it must not turn the map into chronological sections such as “Task 1 learned...” and “Task 2 learned...”.
+
+After the first sync, report the completed Task learning progress and stop. If implementation has not happened, wait for explicit language such as “start implementation,” “start practice,” or “continue developing this Task.” Learning completion and map synchronization are not implementation authorization.
+
+### Implementation Reflection
+
+After authorized implementation and successful verification, return to the same knowledge nodes and add only verified project evidence:
+
+- actual files, modules, configuration, data structures, and tests;
+- how the project uses the concept;
+- why the implemented design was chosen;
+- alternatives only when they were genuinely discussed;
 - practical trade-offs;
-- what remains outside the current learning depth.
+- changes in the user's understanding that their later answers demonstrate.
+
+Do not repeat the basic definition merely to fill the section. Do not manufacture alternatives or claim a learning change without evidence.
+
+When code already existed before the lesson, do not rewrite it to manufacture practice. Read and verify the existing implementation, use it as the reflection material, and perform the second sync.
 
 Update a project knowledge map only when the user or project workflow authorizes file changes. Never mark the user's long-term mastery on their behalf.

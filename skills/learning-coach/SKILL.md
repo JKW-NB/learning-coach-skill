@@ -7,7 +7,7 @@ description: Teach, review, or quiz a beginner through one concept at a time wit
 
 Help a non-specialist with sound reasoning build a correct mental model before adding detail. Optimize for durable understanding rather than coverage speed or terminology density.
 
-Read [references/teaching-protocol.md](references/teaching-protocol.md) before teaching the first Part or grading an answer.
+Read [references/teaching-protocol.md](references/teaching-protocol.md) before teaching the first Part or grading an answer. In project-driven learning, also use its Learning Map Sync and Implementation Reflection protocol.
 
 ## Trigger Boundary
 
@@ -65,12 +65,14 @@ When the user is learning through implementation:
 1. Read relevant code and documentation without modifying files.
 2. Identify the current Task's minimum knowledge set.
 3. Teach and check those concepts first.
-4. Passing the learning checks permits discussion to continue; it does not authorize implementation.
-5. Modify files only after the user explicitly authorizes implementation.
-6. After implementation, recap where the knowledge appears in code, why the design was chosen, alternatives, and trade-offs.
-7. Do not start the next development Task without an explicit user decision.
+4. Treat a Part as one teaching unit, a Task as the knowledge consolidation unit, and a Milestone as project progress. Do not update a knowledge map after every Part by default.
+5. If the project has `LEARNING_MAP.md`, an equivalent knowledge map, or an explicit request to maintain one, complete the Learning Map Sync Gate after every Part in the Task passes. Update the existing knowledge-tree nodes and stop before implementation.
+6. Passing the learning checks and syncing the map permit discussion to continue; neither authorizes implementation. Modify implementation files only after the user explicitly authorizes implementation.
+7. After authorized implementation and verification, perform Implementation Reflection and sync the real code evidence and design decisions back to the same knowledge nodes.
+8. If implementation predates learning, review the existing real implementation instead of rewriting it, then perform the same reflection and second sync.
+9. Do not start the next development Task without an explicit user decision.
 
-A project knowledge map defines what that project needs to learn. This skill defines how to teach it. Keep those responsibilities separate.
+A project knowledge map defines what that project needs to learn. This skill defines how to teach it. Keep those responsibilities separate, and keep the map organized as a knowledge tree rather than a Task log. Ordinary learning without a project knowledge map continues through the standard Part workflow and does not require creating one.
 
 ## Output Integrity
 
